@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Ooredoo</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-white">
+    <main class="w-full md:w-[600px] lg:w-[750px] mx-auto px-0 lg:px-4 flex">
+      <aside class="hidden lg:block w-70">
+        <img
+          src="https://recharge-ooredoo.com/myooredoo/assets/images/logo_red.svg"
+          alt="ooredoo"
+          class="mx-auto w-30 p-5"
+        />
+
+        <ul class="p-5">
+          <li
+            class="navLink flex items-center gap-4 p-3 mb-2 text-xl cursor-pointer duration-300"
+          >
+            <i class="fa-solid fa-house text-gray-400 duration-300"></i>
+
+            Home
+          </li>
+          <li
+            class="navLink flex items-center gap-4 p-3 mb-2 text-xl cursor-pointer duration-300 active"
+          >
+            <i class="fa-solid fa-money-check text-gray-400 duration-300"></i>
+
+            Pay
+          </li>
+          <li
+            class="navLink flex items-center gap-4 p-3 mb-2 text-xl cursor-pointer duration-300"
+          >
+            <i class="fa-solid fa-bag-shopping text-gray-400 duration-300"></i>
+
+            Shop
+          </li>
+          <li
+            class="navLink flex items-center gap-4 p-3 mb-2 text-xl cursor-pointer duration-300"
+          >
+            <i class="fa-solid fa-list-ul text-gray-400 duration-300"></i>
+
+            More
+          </li>
+        </ul>
+      </aside>
+
+      <section class="flex-grow flex flex-col h-screen lg:border">
+        <header
+          class="flex items-center justify-between bg-inherit font-bold p-5"
+        >
+          <span class="text-xl px-2 cursor-pointer"
+            ><i class="fa-solid fa-arrow-left"></i
+          ></span>
+          <h3 class="px-2">Pay</h3>
+          <button class="px-2">
+            عربى <i class="fa-solid fa-circle-question"></i>
+          </button>
+        </header>
+
+        <article class="h-full overflow-y-auto p-5 bg-gray-100">
+          <div
+            class="bg-white p-4 rounded-lg flex justify-between items-center mb-6"
+          >
+            <span class="text-lg font-semibold">Total</span>
+            <span class="text-lg font-bold">5.000 KD</span>
+          </div>
+
+          <h2 class="text-2xl">Payment Method</h2>
+          <p class="text-lg text-gray-600 mb-4">
+            Select the payment method of your choice
+          </p>
+
+          <h3 class="text-lg font-bold text-gray-700 mb-2">PREFERRED</h3>
+
+          <div>
+            <input
+              id="KNET"
+              type="radio"
+              name="paymentMethod"
+              class="hidden peer"
+              checked
+            />
+            <label
+              for="KNET"
+              class="bg-white border-2 border-gray-200 rounded-lg p-3 flex items-center justify-between cursor-pointer peer-checked:border-red-500"
+            >
+              <div class="flex items-center space-x-2">
+                <img
+                  src="https://recharge-ooredoo.com/myooredoo/638289943280525523.png"
+                  alt="KNET"
+                  class="w-10"
+                />
+                <span class="text-lg font-bold text-gray-800">KNET</span>
+              </div>
+            </label>
+          </div>
+
+          <h3 class="text-lg font-bold text-gray-700 mt-4 mb-2">
+            OTHER METHODS
+          </h3>
+
+          <div>
+            <input
+              id="CreditCard"
+              type="radio"
+              name="paymentMethod"
+              class="hidden peer"
+            />
+            <label
+              for="CreditCard"
+              class="bg-white border-2 border-gray-200 rounded-lg p-3 flex items-center justify-between cursor-pointer peer-checked:border-red-500"
+            >
+              <div class="flex items-center space-x-2">
+                <img
+                  src="https://recharge-ooredoo.com/myooredoo/638247324946260737.png"
+                  alt="Credit Card"
+                  class="w-10"
+                />
+                <span class="text-lg font-bold text-gray-800">Credit Card</span>
+              </div>
+            </label>
+          </div>
+        </article>
+
+        <footer
+          class="p-5 rounded-xl"
+          style="box-shadow: 0px -3px 8px 0px #00000036"
+        >
+          <a
+            href="page3.html"
+            class="block text-center w-full bg-red-600 text-white font-bold p-2 rounded-full hover:bg-red-700 transition"
+          >
+            Pay
+          </a>
+        </footer>
+      </section>
+    </main>
+
+  </body>
+</html>
