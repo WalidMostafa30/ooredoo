@@ -26,3 +26,14 @@ body {
     }
   }
 }
+
+.paymentLabel {
+  &.active {
+    border-color: red;
+
+    .cardDetails,
+    i {
+      display: block;
+    }
+  }
+}

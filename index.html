@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,28 +37,28 @@
           >
             <i class="fa-solid fa-house text-gray-400 duration-300"></i>
 
-            Home
+            الرئيسية
           </li>
           <li
             class="navLink flex items-center gap-4 p-3 mb-2 text-xl cursor-pointer duration-300 active"
           >
             <i class="fa-solid fa-money-check text-gray-400 duration-300"></i>
 
-            Pay
+            دفع
           </li>
           <li
             class="navLink flex items-center gap-4 p-3 mb-2 text-xl cursor-pointer duration-300"
           >
             <i class="fa-solid fa-bag-shopping text-gray-400 duration-300"></i>
 
-            Shop
+            المتجر
           </li>
           <li
             class="navLink flex items-center gap-4 p-3 mb-2 text-xl cursor-pointer duration-300"
           >
             <i class="fa-solid fa-list-ul text-gray-400 duration-300"></i>
 
-            More
+            المزيد
           </li>
         </ul>
       </aside>
@@ -70,9 +70,9 @@
           <span class="text-xl px-2 cursor-pointer"
             ><i class="fa-solid fa-arrow-left"></i
           ></span>
-          <h3 class="px-2">Pay</h3>
+          <h3 class="px-2">دفع</h3>
           <button class="px-2">
-            عربى <i class="fa-solid fa-circle-question"></i>
+            English <i class="fa-solid fa-circle-question"></i>
           </button>
         </header>
 
@@ -86,8 +86,8 @@
             <div class="flex items-center gap-3 mb-5">
               <div>
                 <label class="block text-gray-700 font-semibold"
-                  >Mobile Number</label
-                >
+                  >رقم الموبايل
+                </label>
                 <input
                   type="text"
                   class="w-full border border-gray-700 rounded-md px-3 py-2 mt-1 outline-none"
@@ -95,20 +95,20 @@
               </div>
 
               <div>
-                <label class="block text-gray-700 font-semibold">Amount</label>
+                <label class="block text-gray-700 font-semibold">المبلغ</label>
                 <div
                   class="flex items-center border border-gray-700 rounded-md px-3 py-2 mt-1"
                 >
-                  <span class="text-gray-500 pr-2">KD</span>
                   <input type="number" class="w-full outline-none" />
+                  <span class="text-gray-500 pr-2">د.ك</span>
                 </div>
               </div>
             </div>
             <div class="anotherNumber hidden items-center gap-3 mb-5">
               <div>
                 <label class="block text-gray-700 font-semibold"
-                  >Mobile Number</label
-                >
+                  >رقم الموبايل
+                </label>
                 <input
                   type="text"
                   class="w-full border border-gray-700 rounded-md px-3 py-2 mt-1 outline-none"
@@ -116,12 +116,12 @@
               </div>
 
               <div>
-                <label class="block text-gray-700 font-semibold">Amount</label>
+                <label class="block text-gray-700 font-semibold">المبلغ</label>
                 <div
                   class="flex items-center border border-gray-700 rounded-md px-3 py-2 mt-1"
                 >
-                  <span class="text-gray-500 pr-2">KD</span>
                   <input type="number" class="w-full outline-none" />
+                  <span class="text-gray-500 pr-2">د.ك</span>
                 </div>
               </div>
             </div>
@@ -131,7 +131,7 @@
               type="button"
               class="w-full bg-white text-red-600 font-bold p-2 rounded-full border-2 border-red-600 hover:bg-red-600 hover:text-white transition"
             >
-              PAY FOR ANOTHER NUMBER
+              الدفع لرقم آخر
             </button>
           </form>
         </article>
@@ -147,8 +147,8 @@
             ></span>
 
             <div>
-              <h3 class="font-bold">Bill payment / Recharge</h3>
-              <p>Total: KD 5.000</p>
+              <h3 class="font-bold">إعادة التعبئة / دفع الفواتير</h3>
+              <p>الإجمالي: د.ك 5.000</p>
             </div>
           </div>
 
@@ -156,12 +156,24 @@
             href="page2.html"
             class="block text-center w-full bg-red-600 text-white font-bold p-2 rounded-full hover:bg-red-700 transition"
           >
-            CONTINUE
+            استمرار
           </a>
         </footer>
       </section>
     </main>
 
-    <script src="main.js"></script>
+    <script>
+      const anotherNumberBtn = document.querySelector("#anotherNumberBtn");
+      const anotherNumber = document.querySelector(".anotherNumber");
+      anotherNumberBtn.addEventListener("click", () => {
+        if (anotherNumber.classList.contains("hidden")) {
+          anotherNumber.classList.remove("hidden");
+          anotherNumber.classList.add("flex");
+        } else {
+          anotherNumber.classList.remove("flex");
+          anotherNumber.classList.add("hidden");
+        }
+      });
+    </script>
   </body>
 </html>
